@@ -1,0 +1,22 @@
+#!/bin/sh
+
+if which dbus-launch > /dev/null && test -z "DBUS_SESSION_BUS_ADDRESS"; then
+	eval "$(dbus-launch --sh-syntax --exit-with-session)"
+fi
+
+xmodmap -e "keycode 108 = Super_L" &
+xmodmap -e "remove mod1 = Super_L" &
+pgrep -x sxhkd >/dev/null || sxhkd &
+pulseaudio -D &
+#pipewire &
+#/usr/bin/pipewire-pulse &
+#/usr/bin/wireplumber &
+xcalib -d :0 /home/damez/Documents/ColorsProfile/Profiles/sRGB Profile.icc &
+xset r rate 300 50 &
+xsetroot -cursor_name left_ptr &
+dunst &
+mpd &
+xfce4-power-manager &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+pkill -f "clipmenud"; pkill -f "clipnotify"; clipmenud &
+xrandr --output eDP1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output DP1 --off --output HDMI1 --mode 1360x768 --pos 0x0 --rotate normal --output DP2 --off --output HDMI2 --off &

@@ -1,0 +1,46 @@
+#
+# wm independent hotkeys -----------------------------------------------------
+#
+
+# make sxhkd reload its configuration files:
+alt + Escape
+	pkill -USR1 -x sxhkd
+ctrl + alt + Delete
+	lxtask
+# program launcher
+#super + space
+alt + space
+    /home/damez/Documents/scripts/dmenu_mager
+ctrl + space
+    dunstctl close-all
+alt + z
+    /home/damez/Documents/scripts/appmenu
+alt + x
+    /home/damez/Documents/scripts/xcomptog
+alt + a
+    /home/damez/Documents/scripts/webcammove
+alt + Return
+	/usr/local/bin/st
+alt + c
+    /home/damez/Documents/scripts/kopi
+alt + d
+	/home/damez/Documents/scripts/koneksi
+alt + Tab
+	rofi -show window
+alt + o
+	/home/damez/Documents/scripts/j4menu
+alt + e
+	emoji-picker
+alt + x
+	xkill
+Print
+	/home/damez/Documents/scripts/ssdesk
+alt + Print
+	/home/damez/Documents/scripts/screenshot.sh -s
+alt + y
+	/home/damez/Documents/scripts/dmenu_ytview
+alt + p
+	/home/damez/Documents/scripts/touchpad.sh devonoff
+alt + shift + equal
+    rofi -show window
+

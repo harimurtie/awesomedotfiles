@@ -1,0 +1,86 @@
+#
+# wm independent hotkeys -----------------------------------------------------
+#
+
+# make sxhkd reload its configuration files:
+alt + Escape
+	pkill -USR1 -x sxhkd
+ctrl + alt + Delete
+	lxtask
+# program launcher
+#super + space
+alt + space
+    /home/damez/Documents/scripts/dmenu_mager
+ctrl + space
+    dunstctl close-all
+alt + z
+    /home/damez/Documents/scripts/appmenu
+alt + x
+    /home/damez/Documents/scripts/xcomptog
+alt + a
+    /home/damez/Documents/scripts/webcammove
+alt + Return
+	/usr/local/bin/st
+alt + c
+    /home/damez/Documents/scripts/kopi
+alt + d
+	/home/damez/Documents/scripts/koneksi
+alt + Tab
+	rofi -show window
+alt + o
+	/home/damez/Documents/scripts/j4menu
+alt + x
+	xkill
+Print
+	/home/damez/Documents/scripts/ssdesk
+alt + Print
+	/home/damez/Documents/scripts/screenshot.sh -s
+alt + y
+	/home/damez/Documents/scripts/dmenu_ytview
+alt + p
+	/home/damez/Documents/scripts/touchpad.sh devonoff
+alt + Shift + equal
+    rofi -show window
+
+##---------- worm's keybindings ----------##
+
+# Maximize app
+alt + shift + f
+  wormc maximize-active-client
+
+# Close app
+alt + q
+  wormc close-active-client
+
+# Restart worm
+alt + shift + q
+  pkill worm
+
+alt + shift + r
+   worm
+# Switch tags
+alt + {1-9}
+  wormc switch-tag {1-9}
+
+# Move window to tag
+alt + shift + {1-9}
+  wormc move-active-tag {1-9}
+
+
+# Set master windows
+super + m
+   wormc master-active
+
+# Float a window
+super + shift + space
+  wormc float-active
+
+
+
+
+
+
+
+
+
+
